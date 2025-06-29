@@ -4,7 +4,7 @@ THEME = "DarkGray12"
 OUTPUT_FILE_NAME = "record.wav"
 SAMPLE_RATE = 48000
 
-MODELS = ["gpt-4o-mini", "gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo"]
+MODELS = ["mistral:7b"]  # Using Ollama's Mistral model
 DEFAULT_MODEL = MODELS[0]
 
-DEFAULT_POSITION = "Python Developer"
+DEFAULT_POSITION = "Full Stack Developer"
