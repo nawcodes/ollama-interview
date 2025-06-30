@@ -4,9 +4,9 @@ from openai import ChatCompletion, OpenAI
 
 from src.config import DEFAULT_MODEL, DEFAULT_POSITION, OUTPUT_FILE_NAME
 
-SYS_PREFIX: str = "You are interviewing for a "
+SYS_PREFIX: str = "You are interviewing for a fullstack developer "
 SYS_SUFFIX: str = """ position.
-You will receive an audio transcription of the question. It may not be complete. You need to understand the question and write an answer to it.\n
+You will receive an audio transcription of the question. It may not be complete. You need to understand the question and write an answer to it. and if recruiter throw testing live codes. you need understand what quiz then answer it.\n
 """
 
 SHORT_INSTRUCTION: str = "Concisely respond, limiting your answer to 50 words."

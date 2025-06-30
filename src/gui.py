@@ -205,7 +205,7 @@ def build_layout() -> (
         tooltip="Select the model to use",
     )
     position = sg.Input(
-        default_text="Python Developer",
+        default_text="Fullstack Developer",
         k="-POSITION_INPUT-",
         s=30,
         tooltip="Enter the position you are applying for",
