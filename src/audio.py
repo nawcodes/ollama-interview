@@ -1,7 +1,7 @@
 from typing import Any, Dict, List, Optional
 
 import numpy as np
-import PySimpleGUI as sg
+import FreeSimpleGUI as sg
 import sounddevice as sd
 import soundfile as sf
 from loguru import logger
@@ -35,8 +35,11 @@ def record(button: sg.Element) -> None:
     logger.debug("Recording...")
     frames: List[np.ndarray] = []
 
-    # Find BlackHole device ID
+    # Find BlackHole device ID or use default input device
     device_id: Optional[int] = find_blackhole_device_id()
+    if device_id is None:
+        device_id = sd.default.device[0]  # Use default input device
+        logger.debug(f"BlackHole not found, using default input device: {device_id}")
 
     # Record audio
     try:
